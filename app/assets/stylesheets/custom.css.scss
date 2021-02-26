@@ -1,0 +1,35 @@
+@import 'bootstrap/dist/css/bootstrap';
+
+.navbar {
+    background-color: #FA8072 !important;
+}
+
+.nav-link {
+    color: white !important;
+}
+
+#logo {
+    float: left;
+    font-size: .8cm;
+    color: #fff;
+    text-transform: uppercase;
+    letter-spacing: -1px;
+    font-weight: bold;
+}
+
+h1 {
+    color: gray;
+}
+
+#home-container {
+    margin-top: 25px;
+}
+
+
+.jumbotron {
+      background: asset-url('austin-chan-ukzHlkoz1IE-unsplash.jpg') no-repeat center center;
+      background-size: cover;
+      padding-top: 20%;
+      padding-bottom: 20%;
+
+}
