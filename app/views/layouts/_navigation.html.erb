@@ -13,10 +13,9 @@
           <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
             Articles
           </a>
-          <ul class="dropdown-menu" aria-labelledby="navbarDropdown"
-            <%= link_to "New Thoughts", new_article_path, class:"dropdown-item" %>
-            <%= link_to "View Thoughts", articles_path, class:"dropdown-item" %>
-            <li><hr class="dropdown-divider"></li>
+       <ul class="dropdown-menu dropdown-menu-dark" aria-labelledby="navbarDarkDropdownMenuLink">
+            <li><%= link_to "New Thoughts", new_article_path, class:"dropdown-item" %></li>
+            <li><%= link_to "View Thoughts", articles_path, class:"dropdown-item" %></li>
             <li><a class="dropdown-item" href="#">Something else here</a></li>
           </ul>
         </li>
