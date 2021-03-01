@@ -10,8 +10,8 @@
 
 #logo {
     float: left;
-    font-size: .8cm;
-    color: #fff;
+    font-size: 1.5em;
+    color: #F5FFFA;
     text-transform: uppercase;
     letter-spacing: -1px;
     font-weight: bold;
@@ -32,4 +32,19 @@ h1 {
       padding-top: 20%;
       padding-bottom: 20%;
 
+}
+
+html,
+body {
+    height: 100%;
+}
+
+#page-content {
+    flex: 1 0 auto;
+    background-color: #FFE4E1;
+}
+
+#sticky-footer {
+    flex-shrink: none;
+    
 }
