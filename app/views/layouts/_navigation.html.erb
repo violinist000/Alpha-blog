@@ -11,7 +11,7 @@
         </li>
         <li class="nav-item dropdown">
           <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-            Articles
+            Thoughts
           </a>
        <ul class="dropdown-menu dropdown-menu-dark" aria-labelledby="navbarDarkDropdownMenuLink">
             <li><%= link_to "New Thoughts", new_article_path, class:"dropdown-item" %></li>
@@ -19,12 +19,22 @@
             <li><a class="dropdown-item" href="#">Something else here</a></li>
           </ul>
         </li>
-        <li class="nav-item">
-          <%= link_to 'Log in', login_path, class: "nav-link" %>
-        </li>
-        <li class="nav-item">
-          <%= link_to 'Logout', logout_path, class: "nav-link", method: :delete %>
-        </li>
+        
+        <% if logged_in? %>
+          <li class="nav-item">
+            <%= link_to current_user.username, user_path(current_user), class: "nav-link" %>
+          </li>
+          <li class="nav-item">
+            <%= link_to 'Logout', logout_path, class: "nav-link", method: :delete %>
+          </li>
+        <% else%>
+          <li class="nav-item">
+            <%= link_to 'Log in', login_path, class: "nav-link" %>
+          </li>
+          <li class="nav-item">
+            <%= link_to 'Sign up', signup_path, class: "nav-link" %>
+          </li>
+        <% end %>
       </ul>
       <form class="d-flex">
         <input class="form-control me-2" type="Search" placeholder="How would you like to be enlightened today?" aria-label="Search">
