@@ -9,4 +9,11 @@ class ApplicationController < ActionController::Base
     def logged_in?
         !!current_user
     end
+    
+    def require_user
+        if !logged_in?
+            flash[:alert] = "Im sorry, but you are unauthorized to be doing this"
+            redirect_to login_path
+        end 
+    end 
 end
