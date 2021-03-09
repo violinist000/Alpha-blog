@@ -20,19 +20,8 @@ class ArticlesController < ApplicationController
      
     end
     
-    def update
-        if @article.update(article_params)
-            flash[:notice] = "Article was updated successfully"
-            redirect_to @article
-        else
-            render 'edit'
-        end
-    end 
-    
-    def destroy
-        @article.destroy
-        redirect_to articles_path
-    end
+   
+
     
     def create
         @article = Article.new(article_params)
@@ -43,6 +32,21 @@ class ArticlesController < ApplicationController
         else 
            render 'new'
         end
+    end
+    
+    def update
+        if @article.update(article_params)
+            flash[:notice] = "Article was updated successfully"
+            redirect_to @article
+        else
+            render 'edit'
+        end
+    end 
+    
+        
+    def destroy
+        @article.destroy
+        redirect_to articles_path
     end
     
     private
