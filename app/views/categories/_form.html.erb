@@ -1,0 +1,19 @@
+ <%= render 'shared/errors', obj: @category %>
+      <%= form_with(model: @category, class: "shadow p-3 mb-3 bg-danger rounded", local: true) do |f| %>
+        <div class="form-group row">
+          <%= f.label :name, "Category name", class: "col-2 col-form-label text-light" %>
+          <div class="col-10">
+            <%= f.text_field :name, class: "form-control shadow rounded", placeholder: "Enter you unique name" %>
+          </div>
+        </div>
+
+         <!-- https://stackoverflow.com/questions/41664991/bootstrap-4-how-do-i-center-align-a-button -->
+        <div class="container">
+            <div class="row">
+                <div class="col text-center">
+                    <%= f.submit class: "btn btn-outline-light btn-sm" %>
+                </div>
+            </div>
+        </div>
+
+      <% end %>
